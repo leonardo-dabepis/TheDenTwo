@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadTefillin
+  name: tefillin
+  description: A set of two small boxes, each containing a scroll, meant to be affixed with straps onto the forehead and arm during Jewish prayer.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Misc/tefillin.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Misc/tefillin.rsi

@@ -1,0 +1,123 @@
+# SPDX-FileCopyrightText: 2025 leo
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+#prayer rugs
+
+- type: entity
+  id: PrayerRugBase
+  abstract: True
+  parent: BaseItem
+  name: prayer rug
+  description: A rug for performing salah, the daily prayers in Islam. Now to figure out the qibla...
+  components:
+  - type: Rotatable
+  - type: DamageOnHighSpeedImpact
+    damage:
+     types:
+        Holy: 5
+    soundHit:
+     collection: WeakHit
+  - type: Sprite
+    sprite: _DEN/Objects/Specific/Chapel/prayerrugs.rsi
+
+- type: entity
+  id: PrayerRugBlue
+  abstract: False
+  name: blue prayer rug
+  parent: PrayerRugBase
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Specific/Chapel/prayerrugs.rsi
+    state: prugblue
+  - type: Icon
+    sprite: _DEN/Objects/Specific/Chapel/prayerrugs.rsi
+    state: iconblue
+
+- type: entity
+  id: PrayerRugGreen
+  abstract: False
+  name: green prayer rug
+  parent: PrayerRugBase
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Specific/Chapel/prayerrugs.rsi
+    state: pruggreen
+  - type: Icon
+    sprite: _DEN/Objects/Specific/Chapel/prayerrugs.rsi
+    state: icongreen
+
+- type: entity
+  id: PrayerRugRed
+  abstract: False
+  name: red prayer rug
+  parent: PrayerRugBase
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Specific/Chapel/prayerrugs.rsi
+    state: prugred
+  - type: Icon
+    sprite: _DEN/Objects/Specific/Chapel/prayerrugs.rsi
+    state: iconred
+
+#prayer beads
+
+- type: entity
+  id: RosaryBlueGold
+  parent: BaseItem
+  name: rosary
+  description: A rosary with blue and gold beads, used in Catholic prayer.
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Specific/Chapel/rosarybluegold.rsi
+    state: icon
+  - type: Icon
+    sprite: _DEN/Objects/Specific/Chapel/rosarybluegold.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        right:
+      - state: inhand-right
+
+- type: entity
+  id: MisbahaGreen
+  parent: BaseItem
+  name: misbaha
+  description: A green set of prayer beads used by some Muslims during prayer.
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Specific/Chapel/misbahagreen.rsi
+    state: icon
+  - type: Icon
+    sprite: _DEN/Objects/Specific/Chapel/misbahagreen.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        right:
+      - state: inhand-right
+
+- type: entity
+  id: MalaBeads
+  parent: BaseItem
+  name: mala
+  description: A set of wooden prayer beads with an orange tassel, used by various religions such as Buddhism, Hinduism, Jainism, and Sikhism.
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Specific/Chapel/malabeads.rsi
+    state: icon
+  - type: Icon
+    sprite: _DEN/Objects/Specific/Chapel/malabeads.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        right:
+      - state: inhand-right
