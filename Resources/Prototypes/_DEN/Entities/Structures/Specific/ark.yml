@@ -1,0 +1,33 @@
+- type: entity
+  id: ArkOfTheCovenant
+  parent: BaseStructureDynamic
+  name: ark of the covenant
+  suffix: DO NOT MAP. DO NOT SPAWN. DO NOT.
+  description: Huh. How'd that end up here?
+  components:
+  - type: TileEmission
+    color: "#FFFFFF"
+  - type: IgnitionSource
+    temperature: 80000
+    ignited: true
+  - type: IgniteOnCollide
+    fixtureId: fix1
+    fireStacks: 1
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 100000
+  - type: RadiationSource
+  - type: Sprite
+    sprite: _Den/Structures/Specific/ark.rsi
+    state: ark
+  - type: Icon
+    sprite: _Den/Structures/Specific/ark.rsi
+    state: ark
+  - type: Anchorable
+  - type: Pullable
+  - type: AmbientSound
+    range: 5
+    volume: -5
+    sound:
+      path: /Audio/Ambience/ambiholy.ogg
